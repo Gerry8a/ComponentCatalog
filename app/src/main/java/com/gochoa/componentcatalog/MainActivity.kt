@@ -82,21 +82,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Box (
-                        Modifier.fillMaxSize(), contentAlignment = Alignment.Center
-                    ){
-                        var show by remember{mutableStateOf(false)}
-                        Button(onClick = { show = true }) {
-                            Text(text = "Mostrar diálogo")
-                        }
-                        MyConfirmationDialog(show = show, {show = false})
-                    }
-//                    val myOptions = getOptions(listOf("Gerardo", "Pikachu", "Angie"))
-//                    Column {
-//                        myOptions.forEach {
-//                            MyCheckBoxCompleted(checkInfo = it)
-//                        }
-//                    }
+                    SuperHeroView()
                 }
             }
         }
